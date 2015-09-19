@@ -1,0 +1,57 @@
+<!-- keeping for ref- do NOT prepend initial / on folders. found the hard way 09/15/15 stuff didnt show up-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>sgfdb</title>
+		<link rel="stylesheet" type="text/css" href="style/style.css"> 
+<!-- 		
+		Style- 2 notes- 1) for links preferred style is href not src.  src is preferred for img tag
+		2) do not prepend a / prior to the folder.  this worked for In Motion but not for
+		dev server (xmapp) xmapp defaulted to preferred usage of no forward slash
+		and just ignored the command -->
+<!-- 	OLD	<link src="/style/style.css" rel="stylesheet" type="text/css" > -->
+		
+	</head>
+	<body>
+			<header>
+<!-- 			replace with search-- put this in footer -->
+			<div class="container">
+				<div class="title">
+					<h1>sgfdb</h1>
+				</div>
+				<nav>
+				<a href="#">Sign Up!</a> |
+				<a href="/html/faq.html">FAQ</a> |
+				<a href="#">Support</a>
+				</nav>
+			</div>
+		</header>
+	
+		<main>
+		
+		<!-- note that we use a dash here for the CSS class name that contains multiple words, 
+		that is a CSS convention -->
+			<section class="comment-input">
+				<p>Add your Comment:</p>
+				<input type="text"><button>+</button>
+			</section>
+		
+			<section class="comments">
+				<p>This is the first comment!</p>
+				<p>This is the second comment</p>
+				<p>Here is another one</p>
+				<p>One more</p>
+			</section>
+			<img src="images/woods.PNG" alt = "mtn pic">
+		</main>
+		
+		<footer>
+			<h3>This work is released into the public domain</h3>
+		</footer>
+		
+		<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+		<!--  <script src="js/app.js"></script> -->
+	</body>
+</html>
+
