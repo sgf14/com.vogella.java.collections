@@ -2,7 +2,7 @@ package com.vogella.java.collections;
 
 import java.util.ArrayList;
 
-
+//
 public class collections {
 
 	public static void main(String[] args) {
