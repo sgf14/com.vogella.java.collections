@@ -13,7 +13,7 @@
 <!-- 			replace with search-- put this in footer -->
 			<div class="container">
 				<div class="title">
-					<h1>sgfdb</h1>
+					<h1>sgf db</h1>
 				</div>
 				<nav>
 				<a href="#">Sign Up!</a> |
