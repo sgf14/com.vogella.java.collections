@@ -1,4 +1,4 @@
-/*there are no 'AJAX' files.  JSON -JavaScript Object Notation (Javascript Functions) is the application in the form of .js files
+/*there are no 'AJAX' files. JSON -JavaScript Object Notation (Javascript Functions) is the application in the form of .js files
 that utilizes 'AJAX' to update webpage. information/displays without reloading the page.  
 AJAX= Asynchornous Javascript and XML
 See web app book pg 155 for definition and 160 for practical example- which is used below with website Flickr as an example
