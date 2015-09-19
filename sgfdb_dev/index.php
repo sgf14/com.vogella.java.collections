@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
-		<title>sgf db</title>
+		<title>sgfdb</title>
 		<link href="style/reset.css" rel="stylesheet" type="text/css" >
 		<link href="style/style.css" rel="stylesheet" type="text/css" >
 		<link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
