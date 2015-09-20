@@ -32,8 +32,15 @@
 		//for dev testing. need to swap login.php file for localhost db and baseServerpath var below
 		//xmapp also needs to be mysql prot 3307, not standard 3306- can edit config file on that line
 		
+		$appServer = 'dev'; //server switch var; 'dev' or 'prod', defaults to prod
 			//$baseServerPath = '/home/sgfdbc5/public_html/'; //for prod- incorporate into functions
-			$baseServerPath = ''; //for dev- local host
+			if ($appServer == 'dev') {  // duh moment note- must be == to compare; if = it sets var
+				$baseServerPath = ''; //for dev- local host
+			}
+			else {
+				$baseServerPath = '/home/sgfdbc5/public_html/'; //for prod- incorporate into functions
+			}
+		
  			require_once $baseServerPath . 'php/mysql_init.php';
 		?>
 		
