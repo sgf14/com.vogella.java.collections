@@ -21,12 +21,11 @@ header {
 	padding: 30px;
 }
 
-body .appname {
+header .title {
 /* 	book had h1 instead of div tags; css lint said a header should not be qualified in this way- see pg 91 */
 	float: left;
 	width: 570px;
 	color: crimson;
-	font-size: 250%;
 }
 
 header nav {
