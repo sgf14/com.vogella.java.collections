@@ -1,6 +1,17 @@
 <?php
 // intent of this file is to house all common functions that all files can call on as needed.  see lpmj, pg 605. 
-//have orignal group infor now, may add to over time.  see comments on bottom
+//have orignal group infor now, may add to over time.  see comments on bottom.
+
+// dev prod switch
+$appServer = 'dev'; //server switch var; 'dev' or 'prod', defaults to prod
+
+if ($appServer == 'dev') {
+	$baseServerPath = ''; //for dev- local host
+}
+else {
+	$baseServerPath = '/home/sgfdbc5/public_html/'; //for prod- incorporate into functions
+}
+
 $appName = 'sgfdb';
 
 //db access - DEV & PROD

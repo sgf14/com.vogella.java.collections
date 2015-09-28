@@ -93,6 +93,7 @@ main .container {
 	text-align: center;
 	background: #ddd;
 	padding: 5px;
+	/* add webkit items/shadow etc- see what it does.  lpmj book pg 635 */
 }
 
 .tabs a span.active {

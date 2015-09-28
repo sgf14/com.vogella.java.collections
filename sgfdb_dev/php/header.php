@@ -28,12 +28,26 @@ require_once 'html/bodyHeaderTag.html';
 			.	"<li><a href='xx.php'>Main Page</a></li>"
 			.	"<li><a href='xx.php'>XX</a></li></ul><br>"; 
 		else  */
-require_once 'html/bodyMainTag.html';
-			echo "<br><ul class='menu'>"
-			.	"<li><a href='index.php'>Home</a></li>"
-			.	"<li><a href='#'>Sign Up!</a></li></ul><br>"; 
+
+// require_once 'html/bodyMainTag.html';
+echo <<<_END
+<main>
+		<div class="container">
+				<div class = "tabs">
+					<a href = "../index.php"><span class="active">Main</span></a>
+					<a href = "php/sql/historyTab.php"><span>History</span></a>
+					<a href = ""><span>Etymology</span></a>
+					<a href = ""><span>Math/Sci</span></a>
+					<a href = ""><span>Coding</span></a>
+				</div>
+				<div class = "content">
+
+				</div>				
+		</div>
+
+</main>
+_END;
+
 require_once 'html/bodyFooterTag.html';
 
-echo "<script src='http://code.jquery.com/jquery-2.0.3.min.js'></script>"
-	. "<script src='webroot/js/app.js'></script>"
 ?>

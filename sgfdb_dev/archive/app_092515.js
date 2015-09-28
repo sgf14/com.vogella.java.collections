@@ -1,4 +1,5 @@
 //copied from amazeriffic chap 5/Json
+//original app.js file from amazeriffic prior to php tab change attempts
 
 var main = function (toDoObjects) {
 	"use strict";
@@ -20,16 +21,13 @@ var main = function (toDoObjects) {
 					$("main .content").empty();
 					
 					if ($element.parent().is(":nth-child(1)")) {
-						var $content = $("<a href='php/sql/historyTab.php'>History</a>"); // "<a href='php/sql/historyTab.php'>History</a>" <li>a</li><li>b</li>
-						/*var $content = $("<ul>");
-						 * 
+						var $content = $("<ul>");
 						// this organizes the list 'backwards' from last to first. have to be careful with this decrement for loop 
 						// operators- can get into infinite loops
 						var n;
 						for (n = toDos.length - 1; n >= 0; n--) { //undefined is first entry so had to use .length - 1
 							$content.append($("<li>" + toDos[n] + "</li>"));
-						 }*/
-												
+						}
 						$("main .content").append($content);
 					} else if ($element.parent().is(":nth-child(2)")){
 						var $content = $("<ul>");
