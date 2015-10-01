@@ -5,6 +5,7 @@
 session_start();
 
 require_once 'functions.php'; //generic app functions
+// require_once 'html/headTag.html';
 
 //login call; lpmj 608.  activate security after tabs setup
 /* $userStr = '(Guest)';
@@ -22,6 +23,7 @@ echo 	"<div class='appname'>$appName</div>";
 // 		.	"<script src='webroot/js/app.js></script>";
 
 require_once 'html/bodyHeaderTag.html';
+
 //login conditional
 /* 		if ($loggedIn)
 			echo	"<br><ul class='menu'>"
@@ -29,19 +31,9 @@ require_once 'html/bodyHeaderTag.html';
 			.	"<li><a href='xx.php'>XX</a></li></ul><br>"; 
 		else  */
 
-// require_once 'html/bodyMainTag.html';
-echo <<<_END
-<main>
-		<div class="container">
-				<div class = "tabs">
-					<a href = "../index.php"><span class="active">Main</span></a>
-					<a href = "php/sql/historyTab.php"><span>History</span></a>
-					<a href = ""><span>Etymology</span></a>
-					<a href = ""><span>Math/Sci</span></a>
-					<a href = ""><span>Coding</span></a>
-				</div>
-				<div class = "content">
+require_once 'bodyMainTags.php';
 
+echo <<<_END
 				</div>				
 		</div>
 

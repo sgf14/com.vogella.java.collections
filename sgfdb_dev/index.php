@@ -15,7 +15,7 @@
 	<body>
 <!-- 	lpmj inserts the html canvas here- more research needed -->
 <?php 
-require_once '/html/headTag.html';
+require_once 'html/headTag.html';
 // had to move dev/prod switch to functions.php file based on history tab dev
 /* $appServer = 'dev'; //server switch var; 'dev' or 'prod', defaults to prod
 
