@@ -2,9 +2,9 @@
 require_once 'functions.php'; //generic app functions; call on all files
 // implements mysqli format
 echo 	"<div class='appname'>$appName</div>";
-require_once '../html/headTagSub.html';
-require_once '../html/bodyHeaderTag.html';
-require_once 'bodyMainTagsSub.php';
+// require_once '../html/headTagSub.html';
+// require_once '../html/bodyHeaderTag.html';
+// require_once 'bodyMainTagsSub.php';
 
 echo "<h3>History</h3>";
 
@@ -16,10 +16,5 @@ for ($j = 0; $j < $num ; ++$j) {
 	echo 'Title: ' . $row['title'] . '<br>';
 
 }
-echo <<<_END
-				</div>
-		</div>
-</main>
-_END;
-require_once '../html/bodyFooterTag.html';
+// require_once '../html/bodyFooterTag.html';
 ?>

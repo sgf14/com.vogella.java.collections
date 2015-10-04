@@ -33,13 +33,6 @@ require_once 'html/bodyHeaderTag.html';
 
 require_once 'bodyMainTags.php';
 
-echo <<<_END
-				</div>				
-		</div>
-
-</main>
-_END;
-
 require_once 'html/bodyFooterTag.html';
 
 ?>
