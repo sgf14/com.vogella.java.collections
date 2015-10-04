@@ -1,7 +1,7 @@
 <?php
 require_once 'functions.php'; //generic app functions; call on all files
 // implements mysqli format
-// require_once 'header.php';
+// require_once 'header.php';  //this the ways its listed in the book, but doenst work unless all file sin same folder
 
 echo 	"<div class='appname'>$appName</div>";
 require_once '../html/headTagSub.html';
