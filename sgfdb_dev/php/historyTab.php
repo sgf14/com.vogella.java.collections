@@ -1,6 +1,8 @@
 <?php
 require_once 'functions.php'; //generic app functions; call on all files
 // implements mysqli format
+//require_once 'header.php';
+
 echo 	"<div class='appname'>$appName</div>";
 require_once '../html/headTagSub.html';
 require_once '../html/bodyHeaderTag.html';
