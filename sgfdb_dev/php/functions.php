@@ -61,7 +61,7 @@ function sanitizeString($var) {
 	global $connection;
 	$var = strip_tags($str);
 	$var = htmlentities($var);
-	$var = stripcslashes($str);
+	$var = stripslashes($str);
 	return $connection->real_escape_string($var);
 }
 

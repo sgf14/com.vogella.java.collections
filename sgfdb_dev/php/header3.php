@@ -77,83 +77,56 @@ echo 	"<div class='appname'>$appName</div>";
 
 <script src='http://code.jquery.com/jquery-2.0.3.min.js'></script>
 <script>
-					var main = function () {
-						"use strict";
-						var tabs = [];
-						tabs.push({
-							"name" : "Main",
-							"content" : function () {
-								var $content;
-								$content = $("<ul>");
-								<?php 
-								echo "Main stuff";
-								
-								?>
-							
-							return $content;
-							}
-						});
+var main = function () {
+"use strict";
 
-						tabs.push({
-							"name" : "History",
-							"content" : function () {
-								var $content;
-								$content = $("<ul>");
-								<?php 
-								echo "<h3>History</h3>";
+//tab functionality- pg 137 of web app book(WAB)
+	$(".tabs a span").toArray().forEach(function (element) {
+		//create a click handler for this element
+		$(element).on("click", function() {
+			var $element = $(element);
+			$(".tabs a span").removeClass("active");
+			$(element).addClass("active");
+			$("main .content").empty();
+//tab content
+			if ($element.parent().is(":nth-child(1)")) {
+				var $content = $("<span>");
+				// things are going wrong here need - to find concatenate symbol for js, tried plus and period- no luck
+				$content.append(
+				<?php
+// not getting the php to work- all else around this ok- can call php ok, 
+// but not contents- see firebug console error msg.  working on it ... 
+// 				echo "<ul><li>History</li></ul>";
+/* 
+  				$result = queryMysql("SELECT title FROM history ORDER BY history_id");
+ 				$num = $result->num_rows;
 
-								$result = queryMysql("SELECT title FROM history ORDER BY history_id");
-								$num = $result->num_rows;
+ 				for ($j = 0; $j < $num ; ++$j) {
+ 				$row = $result->fetch_array(MYSQLI_ASSOC);
+ 				echo 'Title: ' . $row['title'] . '<br>';
+ 				}
+ */				
+ 				?>
 
-								for ($j = 0; $j < $num ; ++$j) {
-								$row = $result->fetch_array(MYSQLI_ASSOC);
-								echo 'Title: ' . $row['title'] . '<br>';
+				);
+				$content.append("test trsrt</span>"); //attempting to combine these three items
+				$("main .content").append($content);
+			} else if ($element.parent().is(":nth-child(2)")){
+				var $content = $("<span>test123</span>");
+				$content.append("<ul>");
+				$content.append("<li>first</li>");
+						
+				$("main .content").append($content);
+			} else if ($element.parent().is(":nth-child(3)")){
+				$content = $("<div>test456</div>");
+				$("main .content").append($content);
+			}
+//return false or browser will follow the link- pg 136 in WAB
+			return false;
+		});
+	});
+	$(".tabs a:first-child span").trigger("click");
 
-								}
-								
-								?>
-							
-							return $content;
-							}
-						});
-
-						tabs.push({
-							"name" : "Etymology",
-							"content" : function () {
-								var $content;
-								$content = $("<ul>");
-								<?php 
-								echo "Etymology stuff";
-								
-								?>
-							
-							return $content;
-							}
-
-						});
-					};
-
-					//loop over tabs array
-					tabs.forEach (function (tab) {
-						var $aElement = $("<a>").attr("href",""),
-							$spanElement = $("<span>").text(tab.name);
-
-						$aElement.append($spanElement);
-
-						$spanElement.on("click", function () {
-							var $content;
-
-							$(".tabs a span").removeClass("active");
-							$spanElement.addClass("active");
-							$("main .content").empty();
-
-							//get content
-							$content = tab.content();
-
-							$("main .content").append($content);
-							return false;
-							});
-					});
-
-
+};
+$(document).ready(main);				
 </script>
