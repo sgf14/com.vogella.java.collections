@@ -3,7 +3,7 @@
 //have orignal group infor now, may add to over time.  see comments on bottom.
 
 // dev prod switch
-$appServer = 'dev'; //server switch var; 'dev' or 'prod', defaults to prod
+$appServer = 'prod'; //server switch var; 'dev' or 'prod', defaults to prod
 
 if ($appServer == 'dev') {
 	$baseServerPath = ''; //for dev- local host

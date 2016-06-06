@@ -1,7 +1,8 @@
 <?php
 // need to mod index.php file to call this file
 
-session_start();
+//06/05/16- had to disable sesseion_start() temporarily.  error appears in prod.  need to figure out how to fix
+//session_start();
 
 require_once 'functions.php'; //generic app functions
 
